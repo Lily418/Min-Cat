@@ -1,0 +1,16 @@
+<h1><%= @book["title"] %></h1>
+<figure>
+<img alt="book cover image" src="https://covers.openlibrary.org/b/isbn/<%= "#{@book["isbn"]}"%>-M.jpg" />
+<figcaption>Cover images provided by <a href="https://openlibrary.org/">openlibrary.org</a></figcaption>
+</figure>
+<table>
+    <tr>
+        <td>Summary</td>
+        <td><%= @book["summary"] %></td>
+    </tr>
+    <tr>
+        <td>ISBN</td>
+        <td><%= @book["isbn"] %></td>
+    </tr>
+</table>
+<%= link_to "Back to list", books_path %>

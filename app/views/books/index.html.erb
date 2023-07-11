@@ -1,0 +1,15 @@
+<h1><%= @metadata["name"] %></h1>
+<p><%= simple_format @metadata["description_html"] %></p>
+
+<ul>
+  <% @books.each do |book| %>
+    <li>
+        <a href="/books/<%= book["id"] %>">
+        <figure>
+<img alt="book cover image" src="https://covers.openlibrary.org/b/isbn/<%= "#{book["isbn"]}"%>-M.jpg" />
+</figure>
+            <p><%= book["title"] %></p>
+        </a>
+    </li>
+  <% end %>
+</ul>
